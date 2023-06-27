@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-import { Button, Card } from "ui";
-import { Test } from "ui";
+import { Button, Card, Test } from "ui";
 import Link from 'next/link'
 
 const CARD_CONTENT = [
