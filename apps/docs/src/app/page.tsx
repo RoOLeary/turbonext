@@ -19,6 +19,7 @@ export default function Home() {
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
           <Button />
         </div>
+        <h1 className="text-4xl font-black text-white">Anseo agus Anois!</h1>
       </main>
     </div>
   );
