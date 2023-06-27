@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Button, Card } from "ui";
+import Link from 'next/link'
 
 const CARD_CONTENT = [
   {
@@ -35,6 +36,7 @@ export default function Home() {
         </h1>
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
           <Button />
+          <Link href={'/ass-page'} className="text-white">ASS</Link>
         </div>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 place-content-evenly">
