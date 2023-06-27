@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Head from "next/head";
-import { Button } from "ui";
+import { Button, Test } from "ui";
 
 export const metadata: Metadata = {
   title: "Docs - Turborepo Example",
@@ -19,6 +19,7 @@ export default function Home() {
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
           <Button />
         </div>
+        <Test blah={'blah'} />
         <h1 className="text-4xl font-black text-white">Anseo agus Anois!</h1>
       </main>
     </div>
