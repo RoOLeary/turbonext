@@ -4,7 +4,7 @@ import { Button } from "ui";
 import tw from "tailwind-styled-components";
 
 const TestTitle = tw.h1`
-  text-4xl font-black text-yellow-600 text-center pt-8
+  text-4xl font-black text-yellow-600 text-center pt-12 tracking-widest
 `
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export default function Home() {
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
           <Button />
         </div>
-        <TestTitle>Díreach Anseo, Díreach Anois!</TestTitle>
+        <TestTitle>Go díreach Anseo, go tapaidh Ansúid!</TestTitle>
       </main>
     </div>
   );
