@@ -35,9 +35,9 @@ export default function Home() {
           </span>
         </h1>
         <Test />
-        <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
+        <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center flex-col md:mt-8">
           <Button />
-          <Link href={'/ass-page'} className="text-white">ASS</Link>
+          <Link href={'/test'} className="text-white">Test</Link>
         </div>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 place-content-evenly">
