@@ -1,6 +1,11 @@
 import { Metadata } from "next";
 import Head from "next/head";
 import { Button } from "ui";
+import tw from "tailwind-styled-components";
+
+const TestTitle = tw.h1`
+  text-4xl font-black text-yellow-600 text-center pt-8
+`
 
 export const metadata: Metadata = {
   title: "Docs - Turborepo Example",
@@ -19,7 +24,7 @@ export default function Home() {
         <div className="mx-auto mt-5 max-w-xl sm:flex sm:justify-center md:mt-8">
           <Button />
         </div>
-        <h1 className="text-4xl font-black text-white">Anseo agus Anois!</h1>
+        <TestTitle>Díreach Anseo, Díreach Anois!</TestTitle>
       </main>
     </div>
   );
