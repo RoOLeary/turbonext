@@ -1,71 +1,89 @@
-'use client';
-import Link from 'next/link'
-import { useState } from 'react'
+"use client";
+import Link from "next/link";
+import { useState } from "react";
 
-export const Hero = ({  }) => {
+export const Hero = ({}) => {
+  // console.log(data.columns[0].components);
 
-    
-    // console.log(data.columns[0].components);
-   
-    // console.log(output[2].data);
-    const [searchterm, setSearchTerm] = useState('')
-    const [placeholder, setPlaceHolder] = useState('Zoeken...')
+  // console.log(output[2].data);
+  const [searchterm, setSearchTerm] = useState("");
+  const [placeholder, setPlaceHolder] = useState("Zoeken...");
 
-   
-    const enableSearch = true
-    const suggestionsEnabled = true
-    // const suggestions = output[2] ? output[2].data.suggestions : []
+  const enableSearch = true;
+  const suggestionsEnabled = true;
+  // const suggestions = output[2] ? output[2].data.suggestions : []
 
-    const handleSearch = (event) => {
-        console.log(event);
-        if (event.key === 'Enter'){
-            console.log(event.target.value)
-        } else {
-            setSearchTerm(event.target.value)
-        }
+  const handleSearch = (event) => {
+    console.log(event);
+    if (event.key === "Enter") {
+      console.log(event.target.value);
+    } else {
+      setSearchTerm(event.target.value);
     }
+  };
 
+  // console.log(searchterm)
+  // // console.log(output);
+  // const terms = suggestions.map((s, i) => {
+  //     return(
+  //         <a key={i} className="bg-white text-black rounded-full drop-shadow items-center justify-center flex px-4 py-2" href={s.url}>
+  //             <p>{s.text}</p>
+  //         </a>
+  //     );
+  // });
 
-    // console.log(searchterm)
-    // // console.log(output);
-    // const terms = suggestions.map((s, i) => {
-    //     return(
-    //         <a key={i} className="bg-white text-black rounded-full drop-shadow items-center justify-center flex px-4 py-2" href={s.url}>
-    //             <p>{s.text}</p>
-    //         </a>
-    //     ); 
-    // });
-
-    return(
-
-        <div className="w-full overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36 relative md:px-6 lg:px-8" style={{ "backgroundImage": `url(${'https://d1gr3r269tafbs.cloudfront.net/extras/spc-builder/hero-background_1683534928.png'})`, "backgroundSize": "cover", "height": "600px", "backgroundPosition": "center center",  "backgroundAttachment": "scroll" }}>
-            <div className="flex flex-col self-stretch gap-4 relative w-full md:px-20 md:py-5 p-6">
-                <section id="" className="block relative text">
-                    <div className="flex flex-col text-white relative">
-                        <div className="">
-                            <h5 className="font-bold text-lg">420 jobs in 69 locations</h5>
-                        <br />
-                        <h1 className="text-white text-7xl tracking-tighter font-black py-10">Join the grocery revolution</h1>
-                        </div>
-                    </div>
-                
-                    <input type="text" placeholder="Zoeken..." className="md:w-[600px] w-full rounded-full drop-shadow p-3" value="" onChange={handleSearch} />
-                    <div className="flex md:w-[600px] w-full gap-2 flex-wrap pt-4">
-                        <a className="bg-white text-black rounded-full drop-shadow items-center justify-center flex px-4 py-2" href="/tech">
-                        <p>Test</p>
-                        </a>
-                        <a className="bg-white text-black rounded-full drop-shadow items-center justify-center flex px-4 py-2" href="/design">
-                            <p>Design</p>
-                        </a>
-                        <a className="bg-white text-black rounded-full drop-shadow items-center justify-center flex px-4 py-2" href="/runner">
-                            <p>Runner</p>
-                        </a>
-                    </div>
-                </section>
+  return (
+    <div
+      className="relative w-full overflow-hidden py-20 sm:py-32 md:px-6 lg:px-8 lg:pb-32 xl:pb-36"
+      style={{
+        backgroundImage: `url(${"https://d1gr3r269tafbs.cloudfront.net/extras/spc-builder/hero-background_1683534928.png"})`,
+        backgroundSize: "cover",
+        height: "600px",
+        backgroundPosition: "center center",
+        backgroundAttachment: "scroll",
+      }}
+    >
+      <div className="relative flex w-full flex-col gap-4 self-stretch p-6 md:px-20 md:py-5">
+        <section id="" className="text relative block">
+          <div className="relative flex flex-col text-white">
+            <div className="">
+              <h5 className="text-lg font-bold">420 jobs in 69 locations</h5>
+              <br />
+              <h1 className="pb-10 text-7xl font-black tracking-tighter text-white">
+                Join the grocery revolution
+              </h1>
             </div>
-        </div>
+          </div>
 
-
-        
-    )
-}
+          <input
+            type="text"
+            placeholder="Zoeken..."
+            className="w-full rounded-full p-3 drop-shadow md:w-[600px]"
+            value=""
+            onChange={handleSearch}
+          />
+          <div className="flex w-full flex-wrap gap-2 pt-4 md:w-[600px]">
+            <a
+              className="flex items-center justify-center rounded-full px-4 py-2 text-white hover:text-greenish bg-greenish hover:bg-gray-50 drop-shadow"
+              href="/tech"
+            >
+              <p>Test</p>
+            </a>
+            <a
+              className="flex items-center justify-center rounded-full  px-4 py-2 text-white hover:text-greenish bg-greenish hover:bg-gray-50 drop-shadow"
+              href="/design"
+            >
+              <p>Design</p>
+            </a>
+            <a
+              className="flex items-center justify-center rounded-full bg-greenish hover:bg-gray-50 px-4 py-2 text-white hover:text-greenish drop-shadow"
+              href="/runner"
+            >
+              <p>Runner</p>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};

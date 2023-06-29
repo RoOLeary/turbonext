@@ -1,3 +1,74 @@
 @tailwind base;
 @tailwind components;
+
+
+.job_list{
+    padding: 1em;
+    background: #FAF9F6;
+    margin-bottom: 5px
+  }
+  
+  .shortCut{
+    border: 1px solid #e2e8f0;
+    @apply p-4 rounded
+  }
+  
+  .video-docker video {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .video-docker::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  .video-content {
+    z-index: 2;
+  }
+  
+  
+  .shake:hover, .shake:focus {
+        animation: logoshake .5s cubic-bezier(.36,.07,.19,.97) both;
+        backface-visibility: hidden;
+        transform-origin: center;
+  }
+  
+  @keyframes logoshake {
+    0% { transform: rotate(0); }
+    15% { transform: rotate(5deg); }
+    30% { transform: rotate(-5deg); }
+    45% { transform: rotate(4deg); }
+    60% { transform: rotate(-4deg); }
+    75% { transform: rotate(2deg); }
+    85% { transform: rotate(-2deg); }
+    92% { transform: rotate(1deg); }
+    100% { transform: rotate(0); }
+  }
+  
+  .column_heading{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 25px;
+    color: #5b534e;
+  }
+
+
+.topLevel{
+    @apply relative md:absolute mx-auto flex w-full justify-between px-0 md:px-8 bg-transparent text-white;
+    z-index: 200; 
+}
+
+.secondLevel{
+    @apply relative mx-auto flex w-full justify-between px-0 md:px-8 text-white;
+    z-index: 200; 
+}
+
 @tailwind utilities;

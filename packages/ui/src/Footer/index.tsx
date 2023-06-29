@@ -1,8 +1,7 @@
-export const Footer = ({ blah }:any) => {
-    return(
-        <>
-            <h1 className="text-white ui-text-7xl">{blah ? blah : 'Testing'}</h1>
-        </>
-    )
-
-} 
+export const Footer = ({ blah }: any) => {
+  return (
+    <>
+      <h2 className="text-black ui-text-2xl">{blah ? blah : "Testing"}</h2>
+    </>
+  );
+};
